@@ -5,16 +5,16 @@ function calclateForAge(info){
         month:"",
         year:""
        };
-if(day.padStart(2,"0")  > 31){
+if(Number(day.padStart(2,"0"))  > 31){
     error.day= "Must be a valid day";
 }
-if(month.padStart(2,'0') > 12){
+if(Number(month.padStart(2,'0')) > 12){
     error.month= "Must be a valid month";
 }
-if(Number(year) < 1970 || Number(year)  > 2026){
+if(Number(year) < 1970 || Number(year)  > new Date().getFullYear()){
 error.year= "Must be a valid year";
 }
-if(Object.values(error).some((val)=>val !="" || val.trim() )){
+if(Object.values(error).some((val)=>val !=""  )){
 
     return {
         status:422,
