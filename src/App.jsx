@@ -5,7 +5,7 @@ function App() {
 
 
   return (
-<div className=" mx-auto  bg-white-300/50 min-h-screen flex justify-center items-center ">
+<div className=" mx-auto  bg-white-200 overflow-hidden px-2 min-h-screen flex justify-center items-center ">
   <Project />
 
 
